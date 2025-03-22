@@ -9,7 +9,13 @@
     background-color: #f4f4f4;
     margin: 0 auto;
   }
-
+.box{
+    height: 300px;
+    width: 700px;
+    border:1px solid rgb(243, 237, 237);
+    margin: 0 auto;
+    flex-wrap: nowrap;
+}
 p {
     font-size: 24px;
     text-align: center;
@@ -57,21 +63,75 @@ span {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-
+.input{
+    padding:10px;
+    color:rgb(142, 219, 194);
+    border: none;
+    border-radius: 15px;
+   width: 300px;
+   margin-top: 20px;
+}
+.payment-option{
+    margin:50px;
+}
+.cash{
+    border-bottom: 1px dashed grey;
+    border-top: 1px solid #ddd;
+    border-left:1px solid #ddd;
+    border-right: 1px solid #ddd;
+    width:500px;
+    height: 30px;
+    padding:8px;
+}
+.debit{
+    border-bottom: 1px dashed grey;
+    border-top: 1px solid #ddd;
+    border-left:1px solid #ddd;
+    border-right: 1px solid #ddd;
+    width:500px;
+    height: 30px;
+    padding:8px;
+}
+.wallet{
+    border-bottom: 1px dashed grey;
+    border-top: 1px solid #ddd;
+    border-left:1px solid #ddd;
+    border-right: 1px solid #ddd;
+    width:500px;
+    height: 30px;
+    padding:8px;
+}
+.netbanking{
+    border-bottom: 1px solid #ddd;
+    border-top: 1px dashed grey;
+    border-left:1px solid #ddd;
+    border-right: 1px solid #ddd;
+    width:500px;
+    padding:8px;
+    height: 30px;
+}
     </style>
 </head>
 <body>
     <p>Payment Options</p>
     
-
+        <div class="box">
         <span>UPI</span>
         <div class="upi-container">
-            <div class="upi1"><img src="./../img/phonepe.jpg" alt="PhonePe"height="50px"width="70px">PhonePe</div>&nbsp;&nbsp;
-            <div class="upi2"><img src="./../img/Gpay.jpg" alt="Gpay"height="50px"width="50px">G Pay</div>&nbsp;&nbsp;
+            <div class="upi1"><img src="./../img/phonepe.jpg" alt="PhonePe"height="50px"width="100px">PhonePe</div>&nbsp;&nbsp;
+            <div class="upi2"><img src="./../img/Gpay.jpg" alt="Gpay"height="50px"width="90px">G Pay</div>&nbsp;&nbsp;
             <div class="upi3"><img src="./../img/paytm.png" alt="Payment"height="50px"width="50px">Paytm</div>&nbsp;&nbsp;
             <div class="upi4"><img src="./../img/upi.jpg" alt="upi"height="50px"width="50px">Any UPI</div>
+            
         </div>
-    
+        <center>
+        <input type="text" class="input" placeholder="All UPI App">
+    </center>
+    <div class="payment-option">
+    <div class="cash"><img src="" alt="">Cash On Delivery</div>
+    <div class="debit"><img src="" alt="">Debit/Credit Cards</div>
+    <div class="wallet"><img src="" alt="">Wallets</div>
+    <div class="netbanking"><img src="" alt="">Netbanking</div>
+    </div>
 </body>
 </html>
