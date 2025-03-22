@@ -20,7 +20,7 @@
             background-color: #000000;
             padding: 15px 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky; 
+            position: sticky;
         }
         .navbar .logo {
             color: white;
@@ -58,6 +58,28 @@
         .menu-icon:hover {
             color: #ff9800;
         }
+        
+        /* Sub-navbar styles */
+        .sub-navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #2c3e50;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .sub-navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 15px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .sub-navbar a:hover {
+            background-color: #ff9800;
+        }
+        
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -79,6 +101,9 @@
             .menu-icon {
                 display: block;
             }
+            .sub-navbar {
+                flex-wrap: wrap;
+            }
         }
     </style>
 </head>
@@ -96,7 +121,17 @@
         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
     </nav>
 
-<h1>products</h1>
+    <!-- Sub-navbar -->
+    <div class="sub-navbar">
+        <a href="#electronics">Electronics</a>
+        <a href="#fashion">Fashion</a>
+        <a href="#home">Home & Living</a>
+        <a href="#books">Books</a>
+        <a href="#sports">Sports</a>
+    </div>
+
+    <h1>Products</h1>
+
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById("navLinks");
