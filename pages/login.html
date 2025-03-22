@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Sticky Navbar</title>
+    <title>Login</title>
     <style>
         * {
             margin: 0;
@@ -22,7 +22,9 @@
             background-color: #000000;
             padding: 15px 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
+            position:fixed;
+            top: 0%;
+            width: 100%;
         }
 
         .navbar .logo {
@@ -93,11 +95,11 @@
                 display: block;
             }
         }
-    </style>
+</style>
 </head>
-
 <body>
-    <nav class="navbar">
+
+<nav class="navbar">
         <div class="logo">Market Zone</div>
         <ul class="nav-links" id="navLinks">
             <li><a href="../index.html">Home</a></li>
@@ -110,7 +112,10 @@
         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
     </nav>
 
+    <div class="wrapper">
     <h1>Login</h1>
+    
+    
 
     <script>
         function toggleMenu() {
