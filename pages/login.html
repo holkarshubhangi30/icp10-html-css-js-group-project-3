@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
 </head>
+
 <body>
-    <div class="wrapper"><!DOCTYPE html>
+    <div class="wrapper">
+        <!DOCTYPE html>
         <html lang="en">
+
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,9 +22,11 @@
                     padding: 0;
                     box-sizing: border-box;
                 }
+
                 body {
                     font-family: 'Arial', sans-serif;
                 }
+
                 .navbar {
                     display: flex;
                     justify-content: space-between;
@@ -28,21 +34,25 @@
                     background-color: #000000;
                     padding: 15px 20px;
                     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                    position: sticky; 
+                    position: sticky;
                 }
+
                 .navbar .logo {
                     color: white;
                     font-size: 28px;
                     font-weight: bold;
                     letter-spacing: 1px;
                 }
+
                 .nav-links {
                     list-style: none;
                     display: flex;
                 }
+
                 .nav-links li {
                     margin: 0 15px;
                 }
+
                 .nav-links a {
                     color: white;
                     text-decoration: none;
@@ -52,10 +62,12 @@
                     border-radius: 5px;
                     transition: 0.3s;
                 }
+
                 .nav-links a:hover {
                     background-color: #4c4c4c;
                     color: #ff9800;
                 }
+
                 .menu-icon {
                     display: none;
                     font-size: 28px;
@@ -63,9 +75,11 @@
                     cursor: pointer;
                     transition: 0.3s;
                 }
+
                 .menu-icon:hover {
                     color: #ff9800;
                 }
+
                 @media (max-width: 768px) {
                     .nav-links {
                         display: none;
@@ -78,24 +92,28 @@
                         text-align: center;
                         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                     }
+
                     .nav-links.active {
                         display: flex;
                     }
+
                     .nav-links li {
                         padding: 15px 0;
                     }
+
                     .menu-icon {
                         display: block;
                     }
                 }
             </style>
         </head>
+
         <body>
             <nav class="navbar">
                 <div class="logo">Market Zone</div>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="../pages/home.html">Home</a></li>
-                    <li><a href="../pages/products.html">Product</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/products.html">Categories</a></li>
                     <li><a href="../pages/order.html">Order & Billing</a></li>
                     <li><a href="../pages/about.html">About Us</a></li>
                     <li><a href="../pages/contact.html">Contact</a></li>
@@ -103,8 +121,8 @@
                 </ul>
                 <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
             </nav>
-        
-        <h1>Login</h1>
+
+            <h1>Login</h1>
             <script>
                 function toggleMenu() {
                     const navLinks = document.getElementById("navLinks");
@@ -112,7 +130,9 @@
                 }
             </script>
         </body>
+
         </html>
 
 </body>
+
 </html>
