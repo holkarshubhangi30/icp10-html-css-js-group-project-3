@@ -78,3 +78,12 @@ nav ul li a:hover {
 .btn:hover {
     background: #ffaa00;
 }
+.btn-outline {
+    background: none;
+    border: 2px solid #ffcc00;
+    color: #ffcc00;
+}
+.btn-outline:hover {
+    background: #ffcc00;
+    color: black;
+}
