@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home </title>
+    <title>Products</title>
     <style>
         * {
             margin: 0;
@@ -20,7 +20,7 @@
             background-color: #000000;
             padding: 15px 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky; 
+            position: sticky;
         }
         .navbar .logo {
             color: white;
@@ -58,11 +58,31 @@
         .menu-icon:hover {
             color: #ff9800;
         }
+        
+        .sub-navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 10px 0;
+        }
+        .sub-navbar a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 15px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .sub-navbar a:hover {
+            background-color: #ff9800;
+        }
+        
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
                 flex-direction: column;
-                background-color: #2c3e50;
+                background-color: #000000;
                 position: absolute;
                 top: 60px;
                 right: 0;
@@ -79,6 +99,9 @@
             .menu-icon {
                 display: block;
             }
+            .sub-navbar {
+                flex-wrap: wrap;
+            }
         }
     </style>
 </head>
@@ -86,20 +109,25 @@
     <nav class="navbar">
         <div class="logo">Market Zone</div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./pages/products.html">Categories</a></li>
-            <li><a href="./pages/order.html">Order & Billing</a></li>
-            <li><a href="./pages/about.html">About Us</a></li>
-            <li><a href="./pages/contact.html">Contact</a></li>
-            <li><a href="./pages/login.html">Login</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/products.html">Categories</a></li>
+            <li><a href="../pages/order.html">Order & Billing</a></li>
+            <li><a href="../pages/about.html">About Us</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="../pages/login.html">Login</a></li>
         </ul>
         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
     </nav>
-    <div>
-           
-        <div id="bannerImage">
 
-<h1>home</h1>
+    <div class="sub-navbar">
+        <a href="../pages/products.html">Electronics</a>
+        <a href="./product2.html"><b>Fashion</b></a>
+        <a href="./product3.html">Furniture</a>
+        <a href="./product4.html">Books</a>
+        <a href="./product5.html">Vehicles</a>
+    </div>
+    <h1>Fashion</h1>
+
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById("navLinks");
