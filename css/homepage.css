@@ -46,3 +46,12 @@ nav ul li a {
 nav ul li a:hover {
     color: #ffcc00;
 }
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+}
