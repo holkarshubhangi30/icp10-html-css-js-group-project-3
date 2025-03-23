@@ -63,6 +63,43 @@
                         <td>Second Hand Item 2</td>
                         <td>₹15.00</td>
                         <td><input type="number" class="form-control" value="1" min="1" onchange="calculateTotal()"></td>
+                        <td class="item-total">₹15.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="total">Total Amount: ₹<span id="total-amount">0.00</span></div>
+            <div class="total">GST (18%): ₹<span id="gst-amount">0.00</span></div>
+            <div class="total">Delivery Charges: ₹<span id="delivery-charges">45.00</span></div>
+            <div class="total">Final Amount: ₹<span id="final-amount">0.00</span></div>
+
+            <button type="submit" class="btn btn-submit">Checkout</button>
+            <script>
+                function calculateTotal() {
+                    let total = 0;
+                    const rows = document.querySelectorAll('table tr');
+                    rows.forEach((row, index) => {
+                        if (index > 0) { 
+                            const price = parseFloat(row.cells[1].innerText.replace('₹', ''));
+                            const quantity = row.querySelector('input[type="number"]').value;
+                            const itemTotal = price * quantity;
+                            row.cells[3].innerText = '₹' + itemTotal.toFixed(2);
+                            total += itemTotal;
+                        }
+                    });
+                    const deliveryCharges = 45;
+                    const gst = total * 0.18;
+                    const finalAmount = total + gst + deliveryCharges;
+
+                    document.getElementById('total-amount').innerText = total.toFixed(2);
+                    document.getElementById('gst-amount').innerText = gst.toFixed(2);
+
+                    document.getElementById('gst-amount').innerText = gst.toFixed(2);
+                    document.getElementById('delivery-charges').innerText = deliveryCharges.toFixed(2);
+                    document.getElementById('final-amount').innerText = finalAmount.toFixed(2);
+                }
+            </script>
+        </form>
+    </div>
 
     </body>
 </html>
