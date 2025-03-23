@@ -116,7 +116,7 @@ button{
         <div class="box">
         <span>UPI</span>
         <div class="upi-container">
-            <div class="upi1"><a href=""><img src="./../img/phonepe.jpg" alt="https://www.phonepe.com"height="50px"width="100px"><br> PhonePe</a>
+            <div class="upi1"><a href="https://www.phonepe.com"><img src="./../img/phonepe.jpg" alt="phonepe"height="50px"width="100px"><br> PhonePe</a>
             </div>&nbsp;&nbsp;
 
             <div class="upi2"><a href="https://pay.google.com"><img src="./../img/Gpay.jpg" alt="Gpay"height="50px"width="90px"><br>
@@ -144,15 +144,10 @@ button{
    
 </div>
 
-
-    <div class="wallet"><img src="./../img/wallet-approved.png"height="30px" width="30px" alt="">Wallets
- &nbsp;  &nbsp;  &nbsp;&nbsp;  &nbsp;  &nbsp;  &nbsp;<img src="./../img/next-button (1).png"height="20px"width="20px" class="next-btn"alt=""id="wallet">
-       </div>
-
     <div class="netbanking">
         <img src="./../img/online-banking.png"height="30px" width="30px"alt="">Netbanking
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <img src="./../img/next-button (1).png"height="20px"width="20px" alt=""class="next-btn"id="netbanking">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  &nbsp; 
+              <a href="netbanking.html"><img src="./../img/next-button (1).png"height="20px"width="20px" alt=""class="next-btn"id="netbanking"></a>
     </div>
     </div>
     <script>
@@ -163,19 +158,21 @@ button{
 
         function debit() {
     const debitElement = document.querySelector(".debit");
-
-    // Check if the form is already added to prevent duplicates
+    
+  
     if (!document.querySelector(".debit-inputs")) {
         debitElement.innerHTML += `
             <div class="debit-inputs" style="display: flex; flex-direction: column; gap: 5px; margin-top: 10px;">
-                <input type="text" placeholder="Full Name" style="padding: 5px; border-radius: 5px;">
-                <input type="text" placeholder="Card Number" style="padding: 5px; border-radius: 5px;">
-                <input type="text" placeholder="Expiry Date (MM/YY)" style="padding: 5px; border-radius: 5px;">
-                <input type="password" placeholder="Enter CVV" style="padding: 5px; border-radius: 5px;">
-                <button class="button" style="padding:6px; border-radius:10px;"><a href="confirm.html">Pay</a></button>
+                <input type="text"id="full" placeholder="Full Name" style="padding: 5px; border-radius: 5px;">
+                <input type="text"id="cardno" placeholder="Card Number" style="padding: 5px; border-radius: 5px;">
+                <input type="text" id="expiry"placeholder="Expiry Date (MM/YY)" style="padding: 5px; border-radius: 5px;">
+                <input type="password" id="cvv"placeholder="Enter CVV" style="padding: 5px; border-radius: 5px;">
+                <button class="button" onclick="valid()"style="padding:6px; border-radius:10px;"><a href="confirm.html">Pay</a></button>
             </div>`;
+            
     }
 }
+
 
     </script>
 </body>
