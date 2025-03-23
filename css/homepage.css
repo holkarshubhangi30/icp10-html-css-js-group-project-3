@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background: url('12345.jpeg') no-repeat center center/cover;
+    background: url('homepage.jpeg') no-repeat center center/cover;
     height: 75vh;
     display: flex;
     flex-direction: column;
