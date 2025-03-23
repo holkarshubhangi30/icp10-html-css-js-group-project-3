@@ -101,7 +101,11 @@ span {
 }
 a{
     text-decoration: none;
-    color:black
+    color:black;
+    cursor: pointer;
+}
+button{
+    border:none
 }
     </style>
 </head>
@@ -124,38 +128,54 @@ a{
             <div class="upi4"><img src="./../img/upi.jpg" alt="upi"height="50px"width="50px">Any UPI</div>
             
         </div>
-        <center>
-        <a href=""><input type="text" class="input" placeholder="All UPI App"><img src="./../img/next-button (1).png" height="30px" width="30px"></a>
-    </center>
+       
     <div class="payment-option">
 
     <div class="cash">
         <img src="./../img/indian.png"height="30px" width="30px" alt="">Cash On Delivery 
-        <button onclick="cash()"><img src="./../img/next-button (1).png"height="20px"width="20px" class="next-btn" alt=""id="cash"></button>
+    <a href="confirm.html"> <img src="./../img/next-button (1).png"height="20px"width="20px" class="next-btn" alt=""id="cash"></a>
     </div>
 
-    <div class="debit"><img src="./../img/credit-card.png"height="30px" width="30px" alt="">Debit/Credit Cards
-      &nbsp;  &nbsp;  &nbsp; <button><img src="./../img/next-button (1).png"height="20px"width="20px"class="next-btn" alt=""id="debit"></button> 
-    </div>
+    <div class="debit">
+    <img src="./../img/credit-card.png" height="30px" width="30px" alt="">Debit/Credit Cards
+    &nbsp; &nbsp; &nbsp;
+
+        <img src="./../img/next-button (1).png" height="20px" width="20px" class="next-btn" alt="" id="debit" onclick="debit()">
+   
+</div>
+
 
     <div class="wallet"><img src="./../img/wallet-approved.png"height="30px" width="30px" alt="">Wallets
- &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;<button><img src="./../img/next-button (1).png"height="20px"width="20px" class="next-btn"alt=""id="wallet"></button>
+ &nbsp;  &nbsp;  &nbsp;&nbsp;  &nbsp;  &nbsp;  &nbsp;<img src="./../img/next-button (1).png"height="20px"width="20px" class="next-btn"alt=""id="wallet">
        </div>
 
     <div class="netbanking">
         <img src="./../img/online-banking.png"height="30px" width="30px"alt="">Netbanking
-        <button><img src="./../img/next-button (1).png"height="20px"width="20px" alt=""class="next-btn"id="netbanking"></button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="./../img/next-button (1).png"height="20px"width="20px" alt=""class="next-btn"id="netbanking">
     </div>
     </div>
     <script>
         const cashElement = document.getElementById("cash");
-        const  debitElement = document.getElementById("debit");
+        
         const walletElement = document.getElementById("wallet");
         const netbankingElement = document.getElementById("netbanking");
 
-        function cash(){
-            
-        }
+        function debit() {
+    const debitElement = document.querySelector(".debit");
+
+    // Check if the form is already added to prevent duplicates
+    if (!document.querySelector(".debit-inputs")) {
+        debitElement.innerHTML += `
+            <div class="debit-inputs" style="display: flex; flex-direction: column; gap: 5px; margin-top: 10px;">
+                <input type="text" placeholder="Full Name" style="padding: 5px; border-radius: 5px;">
+                <input type="text" placeholder="Card Number" style="padding: 5px; border-radius: 5px;">
+                <input type="text" placeholder="Expiry Date (MM/YY)" style="padding: 5px; border-radius: 5px;">
+                <input type="password" placeholder="Enter CVV" style="padding: 5px; border-radius: 5px;">
+                <button class="button" style="padding:6px; border-radius:10px;"><a href="confirm.html">Pay</a></button>
+            </div>`;
+    }
+}
 
     </script>
 </body>
