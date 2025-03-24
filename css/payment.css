@@ -1,0 +1,89 @@
+p {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.box {
+    height: auto;
+    width: 700px;
+    border: 1px solid rgb(243, 237, 237);
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    padding: 20px;
+}
+
+span {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.upi-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.upi-container div {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.upi-container div img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+.upi-container div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+    padding: 10px;
+    color: rgb(142, 219, 194);
+    border:0.5px solid gray;
+    border-radius: 15px;
+    width: 300px;
+    margin-top: 20px;
+}
+
+.payment-option div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    width: 500px;
+    height: 40px;
+    padding: 8px;
+    margin: 10px auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.payment-option div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.payment-option img {
+    width: 30px;
+    height: 30px;
+}
