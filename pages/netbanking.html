@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+  
+    background-color: #fffdfd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+    flex-direction: column;
+}
+
+p {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+.box {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.box a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+.btn{
+    justify-content: center;
+    padding:10px;
+    border-radius: 14px;
+    border:none;
+    background-color: black;
+    color:white;
+    margin-top: 30px;
+    cursor: pointer;
+
+}
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #eaeaea;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <p>Select Bank</p>
+    <div class="container">
+    <div class="box"><a href="https://www.hdfcbank.com"><img src="./../img/hdfc.jpg"height="30px"width="35px" alt=""><br>HDFC Bank</a></div>
+    <div  class="box"><a href="https://www.icicibank.com"><img src="./../img/iciciBank.png"height="30px"width="35px" alt=""></a>ICICI Bank</div>
+    <div  class="box"><a href="https://www.onlinesbi.sbi/"><img src="./../img/statebank.png"height="30px"width="35px" alt="">State Bank of India</a></div>
+    <div  class="box"><a href="https://www.kotak.com"><img src="./../img/kotakbank.jpg"height="30px"width="35px" alt=""></a>Kotak Mahindra Bank</div>
+    <div  class="box"><a href="https://www.sc.com"><img src="./../img/standard_chartered.jpg"height="30px"width="35px" alt="">Standard Chartered Bank</a></div>
+    <div  class="box"><a href="https://www.indusind.com"><img src="./../img/indusindbank.png"height="30px"width="35px" alt="">Indusind Bank</a></div>
+   
+</div>
+<button class="btn"><a href="payment.html" >Go Back</a></button>
+</body>
+</html>
