@@ -1,15 +1,18 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Page</title>
+    <link rel="stylesheet" href="../css/billing_page.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-  body {
+        .body {
             font-family: Arial, sans-serif;
             margin: 20px;
             background-color: #f8f9fa;
         }
-        table {
+        .table {
             margin-bottom: 20px;
         }
         .total {
@@ -23,13 +26,10 @@
         .btn-submit:hover {
             background-color: #0056b3;
         }
-
     </style>
-        <title>Billing page</title>
-    </head>
-    <body>
-        <h1>Billing page</h1>
-<div class="container">
+</head>
+<body>
+    <div class="container">
         <h1 class="text-center">Billing Page</h1>
         <form id="billing-form">
             <h2>User Detail</h2>
@@ -111,14 +111,11 @@
 
                     document.getElementById('total-amount').innerText = total.toFixed(2);
                     document.getElementById('gst-amount').innerText = gst.toFixed(2);
-
-                    document.getElementById('gst-amount').innerText = gst.toFixed(2);
                     document.getElementById('delivery-charges').innerText = deliveryCharges.toFixed(2);
                     document.getElementById('final-amount').innerText = finalAmount.toFixed(2);
                 }
             </script>
         </form>
     </div>
-
-    </body>
+</body>
 </html>
