@@ -1,16 +1,35 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Page</title>
+    <link rel="stylesheet" href="../css/billing_page.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-
+        .body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+        .table {
+            margin-bottom: 20px;
+        }
+        .total {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .btn-submit {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
     </style>
-        <title>Billing page</title>
-    </head>
-    <body>
-        <h1>Billing page</h1>
-<div class="container">
+</head>
+<body>
+    <div class="container">
         <h1 class="text-center">Billing Page</h1>
         <form id="billing-form">
             <h2>User Detail</h2>
@@ -63,6 +82,40 @@
                         <td>Second Hand Item 2</td>
                         <td>₹15.00</td>
                         <td><input type="number" class="form-control" value="1" min="1" onchange="calculateTotal()"></td>
+                        <td class="item-total">₹15.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="total">Total Amount: ₹<span id="total-amount">0.00</span></div>
+            <div class="total">GST (18%): ₹<span id="gst-amount">0.00</span></div>
+            <div class="total">Delivery Charges: ₹<span id="delivery-charges">45.00</span></div>
+            <div class="total">Final Amount: ₹<span id="final-amount">0.00</span></div>
 
-    </body>
+            <button type="submit" class="btn btn-submit">Checkout</button>
+            <script>
+                function calculateTotal() {
+                    let total = 0;
+                    const rows = document.querySelectorAll('table tr');
+                    rows.forEach((row, index) => {
+                        if (index > 0) { 
+                            const price = parseFloat(row.cells[1].innerText.replace('₹', ''));
+                            const quantity = row.querySelector('input[type="number"]').value;
+                            const itemTotal = price * quantity;
+                            row.cells[3].innerText = '₹' + itemTotal.toFixed(2);
+                            total += itemTotal;
+                        }
+                    });
+                    const deliveryCharges = 45;
+                    const gst = total * 0.18;
+                    const finalAmount = total + gst + deliveryCharges;
+
+                    document.getElementById('total-amount').innerText = total.toFixed(2);
+                    document.getElementById('gst-amount').innerText = gst.toFixed(2);
+                    document.getElementById('delivery-charges').innerText = deliveryCharges.toFixed(2);
+                    document.getElementById('final-amount').innerText = finalAmount.toFixed(2);
+                }
+            </script>
+        </form>
+    </div>
+</body>
 </html>
