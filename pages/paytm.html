@@ -39,7 +39,7 @@
             border-radius: 5px;
         }
         button {
-            background-color: #002970;
+            background-color:black;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -50,6 +50,10 @@
         button:hover {
             background-color: #0141aa;
         }
+        a{
+            text-decoration: none;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -59,6 +63,7 @@
         <p>Enter your Paytm number to proceed</p>
         <input type="tel" id="paytm-number" placeholder="Enter your Paytm number">
         <button onclick="processPaytmPayment()">Pay Now</button>
+        <button><a href="payment.html">Go Back</a></button>
     </div>
 
     <script>

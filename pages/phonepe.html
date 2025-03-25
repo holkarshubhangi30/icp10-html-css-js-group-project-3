@@ -48,7 +48,11 @@
             transition: 0.3s ease;
         }
         button:hover {
-            background-color: #45a049;
+            background-color: #383172;
+        }
+        a{
+            text-decoration: none;
+            color:white;
         }
     </style>
 </head>
@@ -59,6 +63,7 @@
         <p>Enter your UPI ID to proceed with PhonePe</p>
         <input type="text" id="upi-id" placeholder="Enter your UPI ID">
         <button onclick="processPayment()">Pay Now</button>
+        <button><a href="payment.html">Go Back</a></button>
     </div>
 
     <script>
