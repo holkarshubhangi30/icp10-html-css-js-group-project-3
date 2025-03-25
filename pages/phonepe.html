@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhonePe Payment</title>
+    <link rel="stylesheet" href="./../css/payment.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        h2 {
+            color: black;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>PhonePe Payment</h2>
+        <img src="./../img/phonepe.jpg" alt="PhonePe">
+        <p>Enter your UPI ID to proceed with PhonePe</p>
+        <input type="text" id="upi-id" placeholder="Enter your UPI ID">
+        <button onclick="processPayment()">Pay Now</button>
+    </div>
+
+    <script>
+        function processPayment() {
+            const upiId = document.getElementById('upi-id').value.trim();
+            if (upiId === "") {
+                alert("Please enter your UPI ID.");
+                return;
+            }
+            alert(`Payment request sent to ${upiId} via PhonePe!`);
+            window.location.href = 'confirm.html';
+        }
+    </script>
+</body>
+</html>

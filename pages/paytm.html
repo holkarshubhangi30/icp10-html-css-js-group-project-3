@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paytm Payment</title>
+    <link rel="stylesheet" href="./../css/payment.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        h2 {
+            color: #002970;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #002970;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #0141aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Paytm Payment</h2>
+        <img src="./../img/paytm.png" alt="Paytm">
+        <p>Enter your Paytm number to proceed</p>
+        <input type="tel" id="paytm-number" placeholder="Enter your Paytm number">
+        <button onclick="processPaytmPayment()">Pay Now</button>
+    </div>
+
+    <script>
+        function processPaytmPayment() {
+            const paytmNumber = document.getElementById('paytm-number').value.trim();
+            if (paytmNumber === "" || paytmNumber.length !== 10 || isNaN(paytmNumber)) {
+                alert("Please enter a valid 10-digit Paytm number.");
+                return;
+            }
+            alert(`Payment request sent to Paytm number: ${paytmNumber}!`);
+            window.location.href = 'confirm.html';
+        }
+    </script>
+</body>
+</html>

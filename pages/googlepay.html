@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Pay Payment</title>
+    
+    <style>
+        body {
+            
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        h2 {
+            color: black;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        button:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Google Pay Payment</h2>
+        <img src="./../img/Gpay.jpg" alt="Google Pay">
+        <p>Enter your Google Pay UPI ID</p>
+        <input type="text" id="gpay-id" placeholder="Enter your GPay UPI ID">
+        <button onclick="processGPayPayment()">Pay Now</button>
+    </div>
+
+    <script>
+        function processGPayPayment() {
+            const gpayId = document.getElementById('gpay-id').value.trim();
+            if (gpayId === "") {
+                alert("Please enter your Google Pay UPI ID.");
+                return;
+            }
+            alert(`Payment request sent to ${gpayId} via Google Pay!`);
+            window.location.href = 'confirm.html';
+        }
+    </script>
+</body>
+</html>
