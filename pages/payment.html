@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="./../css/payment.css">
+    <style>
+        p {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+.box {
+    height: auto;
+    width: 700px;
+    border: 1px solid rgb(243, 237, 237);
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    padding: 20px;
+}
+
+span {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.upi-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.upi-container div {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.upi-container div img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+.upi-container div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+    padding: 10px;
+    color: rgb(142, 219, 194);
+    border:0.5px solid gray;
+    border-radius: 15px;
+    width: 300px;
+    margin-top: 20px;
+}
+
+.payment-option div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    width: 500px;
+    height: 40px;
+    padding: 8px;
+    margin: 10px auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.payment-option div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.payment-option img {
+    width: 30px;
+    height: 30px;
+}
+.next-btn{
+    margin-left: 300px;
+}
+a{
+    text-decoration: none;
+    color:black;
+    cursor: pointer;
+}
+button{
+    border:none
+}
+    </style>
+</head>
+<body>
+   
+    <p>Payment Options</p>
+    
+        <div class="box">
+        <span>UPI</span>
+        <div class="upi-container">
+            <div class="upi1"><a href="https://www.phonepe.com"><img src="./../img/phonepe.jpg" alt="phonepe"height="50px"width="100px"><br> PhonePe</a>
+            </div>&nbsp;&nbsp;
+
+            <div class="upi2"><a href="https://pay.google.com"><img src="./../img/Gpay.jpg" alt="Gpay"height="50px"width="90px"><br>
+                G Pay</a></div>&nbsp;&nbsp;
+
+            <div class="upi3"><a href="https://paytm.com"><img src="./../img/paytm.png" alt="Payment"height="50px"width="50px"><br>
+                Paytm</a></div>&nbsp;&nbsp;
+
+            <div class="upi4"><img src="./../img/upi.jpg" alt="upi"height="50px"width="50px">Any UPI</div>
+            
+        </div>
+       
+    <div class="payment-option">
+
+    <div class="cash">
+        <img src="./../img/indian.png"height="30px" width="30px" alt="">Cash On Delivery 
+    <a href="confirm.html"> <img src="./../img/next-button (1).png"height="20px"width="20px" class="next-btn" alt=""id="cash"></a>
+    </div>
+
+    <div class="debit">
+    <img src="./../img/credit-card.png" height="30px" width="30px" alt="">Debit/Credit Cards
+    &nbsp; &nbsp; &nbsp;
+
+        <img src="./../img/next-button (1).png" height="20px" width="20px" class="next-btn" alt="" id="debit" onclick="debit()">
+   
+</div>
+
+    <div class="netbanking">
+        <img src="./../img/online-banking.png"height="30px" width="30px"alt="">Netbanking
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  &nbsp; 
+              <a href="netbanking.html"><img src="./../img/next-button (1).png"height="20px"width="20px" alt=""class="next-btn"id="netbanking"></a>
+    </div>
+    </div>
+    <script>
+        const cashElement = document.getElementById("cash");
+        
+        const walletElement = document.getElementById("wallet");
+        const netbankingElement = document.getElementById("netbanking");
+
+        function debit() {
+    const debitElement = document.querySelector(".debit");
+    
+  
+    if (!document.querySelector(".debit-inputs")) {
+        debitElement.innerHTML += `
+            <div class="debit-inputs" style="display: flex; flex-direction: column; gap: 5px; margin-top: 10px;">
+                <input type="text"id="full" placeholder="Full Name" style="padding: 5px; border-radius: 5px;">
+                <input type="text"id="cardno" placeholder="Card Number" style="padding: 5px; border-radius: 5px;">
+                <input type="text" id="expiry"placeholder="Expiry Date (MM/YY)" style="padding: 5px; border-radius: 5px;">
+                <input type="password" id="cvv"placeholder="Enter CVV" style="padding: 5px; border-radius: 5px;">
+                <button class="button" onclick="valid()"style="padding:6px; border-radius:10px;"><a href="confirm.html">Pay</a></button>
+            </div>`;
+            
+    }
+}
+
+
+    </script>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="./../css/contact.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
@@ -86,8 +87,8 @@
     <nav class="navbar">
         <div class="logo">Market Zone</div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="../pages/home.html">Home</a></li>
-            <li><a href="../pages/products.html">Product</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/products.html">Categories</a></li>
             <li><a href="../pages/order.html">Order & Billing</a></li>
             <li><a href="../pages/about.html">About Us</a></li>
             <li><a href="../pages/contact.html">Contact</a></li>
@@ -96,7 +97,22 @@
         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
     </nav>
 
-<h1>contact</h1>
+    <h1 class="heading">Contact Us</h1>
+    <section class="contact-container">
+        <form class="contact-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+             <br />  <br />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+              <br />  <br />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+      <br />  <br />
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById("navLinks");
