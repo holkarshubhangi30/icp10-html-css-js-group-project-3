@@ -5,6 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".contact-form").addEventListener("submit", function(event) {
+                let name = document.getElementById("name").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let message = document.getElementById("message").value.trim();
+    
+                if (name === "" || email === "" || message === "") {
+                    alert("Please fill all the fields.");
+                    event.preventDefault();
+                } else {
+                    alert("Message sent successfully!");
+                }
+            });
+        });
+    
+        function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+        }
+    </script>
+    
+        
     <style>
         * {
             margin: 0;
@@ -113,6 +136,7 @@
         </form>
     </section>
     
+
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById("navLinks");
