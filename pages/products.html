@@ -85,11 +85,17 @@
             justify-content: center;
         }
         .product-card {
-            background: white;
+            background: rgb(255, 255, 255);
             padding: 15px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+        }
+        .product-card:hover{
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            transform: translateY(-5px);
+
         }
         .product-card img {
             width: 100%;
@@ -105,7 +111,7 @@
             margin-bottom: 10px;
         }
         .buy-btn {
-            background: #ff9800;
+            background: #f5a42b;
             color: white;
             padding: 8px 15px;
             border: none;
@@ -114,7 +120,7 @@
             transition: 0.3s;
         }
         .buy-btn:hover {
-            background: #e68900;
+            background: #ff8800;
         }
         .product-img {
             height: 150px;
