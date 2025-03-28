@@ -53,3 +53,45 @@
     outline: none;
     box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
 }
+.footer-content{
+    text-align: center;
+    margin-top: 200px;
+    font-size: 14px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    height: 70px;
+}
+.socials{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 40px;
+    color: #ffffff;
+
+}
+.li-content{
+    
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    transition: 0.3s;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.li-content:hover{
+    color: #ff9800;
+    transform: scale(1.1);
+}
+.socials:hover{
+    color: #ff9800;
+    transform: scale(1.1);
+}
+.footer-content:hover{
+    color: #ff9800;
+}
