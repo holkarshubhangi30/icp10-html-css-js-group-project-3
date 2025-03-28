@@ -77,6 +77,55 @@
         .sub-navbar a:hover {
             background-color: #ff9800;
         }
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .product-card {
+            background: rgb(255, 255, 255);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product-card:hover{
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            transform: translateY(-5px);
+
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .product-card p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .buy-btn {
+            background: #f5a42b;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .buy-btn:hover {
+            background: #ff8800;
+        }
+        .product-img {
+            height: 150px;
+            width: 200px;
+        }
         
         @media (max-width: 768px) {
             .nav-links {
@@ -124,9 +173,133 @@
         <a href="./product2.html">Fashion</a>
         <a href="./product3.html">Furniture</a>
         <a href="./product4.html">Books</a>
-        <a href="./product5.html">Vehicles</a>
+        <a href="./product5.html">vehicle</a>
     </div>
-    <h1>Electronics</h1>
+    <h1 style="text-align: center; margin: 20px 0;">Electronics</h1>
+    
+    <div class="products-container">
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct1.jpeg" style="height: 250px;" alt="Laptop">
+            <h3>Asus TUF Gaming A15</h3>
+            <p>$2559</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct2.webp" style="height: 250px;" alt="Smartphone">
+            <h3>iPhone 13</h3>
+            <p>$1290</p>
+            <button class="buy-btn">Buy Now</button> .
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct3.jpeg" style="height: 250px;"alt="Headphones">
+            <h3>Wireless Headphones</h3>
+            <p>$1874</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct4.jpeg" style="height: 250px;"alt="watch">
+            <h3>Apple Watch</h3>
+            <p>$1874</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct5.jpeg" style="height: 250px;"alt="playstation">
+            <h3>Sony PlayStation 5</h3>
+            <p>$1874</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct6.jpeg" style="height: 250px;"alt="webcam">
+            <h3>Webcams</h3>
+            <p>$1874</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct7.jpeg" style="height: 250px;"alt="Headphones">
+            <h3>Car Dash Cameras</h3>
+            <p>$1874</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct8.jpeg" style="height: 250px;"alt="vacume cleaner">
+            <h3>Vacuum Cleaners</h3>
+            <p>$1874</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct9.jpeg" style="height: 250px;"alt="weight machine">
+            <h3>Digital Weighing Scales</h3>
+            <p>$1874</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct10.jpeg" style="height: 250px;"alt="camera">
+            <h3>Security Cameras</h3>
+            <p>$1874</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct11.jpeg" style="height: 250px;"alt="dslr camera">
+            <h3>Canon DSLR Camera</h3>
+            <p>$1874</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct12.jpeg" style="height: 250px;"alt="laptop">
+            <h3>HP Pavilion 15</h3>
+            <p>$1874</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct13.jpeg" style="height: 250px;"alt="macbook">
+            <h3>Apple MacBook Pro (Intel/M1/M2)</h3>
+            <p>$1874</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct14.jpeg" style="height: 250px;" alt="Laptop">
+            <h3>Dell XPS 13/15</h3>
+            <p>$2559</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct15.jpeg" style="height: 250px;" alt="Laptop">
+            <h3>HP Spectre x360</h3>
+            <p>$2559</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct16.jpeg" style="height: 250px;" alt="Laptop">
+            <h3>Lenovo ThinkPad X1 Carbon</h3>
+            <p>$2559</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg//eleproduct17.jpeg" style="height: 250px;" alt="Laptop">
+            <h3>MSI GF63 Thin</h3>
+            <p>$2559</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct18.jpeg" style="height: 250px;" alt="Laptop">
+            <h3>Acer Aspire 5</h3>
+            <p>$2559</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct19.jpeg" style="height: 250px;" alt="Laptop">
+            <h3>Asus ROG Strix G15/G17</h3>
+            <p>$2559</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/eleproduct20.jpeg" style="height: 250px;" alt="Laptop">
+            <h3>SLenovo IdeaPad 3/5</h3>
+            <p>$2559</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </div>
+
 
     <script>
         function toggleMenu() {
