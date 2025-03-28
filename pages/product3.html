@@ -77,6 +77,55 @@
         .sub-navbar a:hover {
             background-color: #ff9800;
         }
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .product-card {
+            background: rgb(255, 255, 255);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product-card:hover{
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            transform: translateY(-5px);
+
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .product-card p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .buy-btn {
+            background: #f5a42b;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .buy-btn:hover {
+            background: #ff8800;
+        }
+        .product-img {
+            height: 150px;
+            width: 200px;
+        }
         
         @media (max-width: 768px) {
             .nav-links {
@@ -126,9 +175,105 @@
         <a href="./product4.html">Books</a>
         <a href="./product5.html">Vehicles</a>
     </div>
-    <h1>Furniture</h1>
-    <img src="">
-
+    <h1 style="text-align: center; margin: 20px 0;">Furniture</h1>
+    <div class="products-container">
+        <div class="product-card">
+            <img src="../img/productimg/furniture1.jpg" style="height: 250px;" alt="furniture1">
+            <h3>Dining set</h3>
+            <p>₹3999</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture2.jpg" style="height: 250px;" alt="furniture2">
+            <h3>Office chair</h3>
+            <p>₹799</p>
+            <button class="buy-btn">Buy Now</button> 
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture3.jpg" style="height: 250px;"alt="furniture3">
+            <h3>Sofa set</h3>
+            <p>₹2250</p>
+           <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture4.jpg" style="height: 250px;"alt="furniture4">
+            <h3>Bed</h3>
+            <p>₹5600</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture5.jpg" style="height: 250px;"alt="furniture5">
+            <h3>Wardrobe</h3>
+            <p>₹8990</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture6.jpg" style="height: 250px;"alt="furniture6">
+            <h3>Outdoor Furniture</h3>
+            <p>₹2600</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture7.jpg" style="height: 250px;"alt="furniture7">
+            <h3>Mattresses</h3>
+            <p>₹3199</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture8.jpg" style="height: 250px;"alt="furniture8">
+            <h3>Study Table</h3>
+            <p>₹999</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture9.jpg" style="height: 250px;"alt="furniture9">
+            <h3>Recliner chair</h3>
+            <p>₹1500</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture10.jpg" style="height: 250px;"alt="furniture10">
+            <h3>Bureau</h3>
+            <p>₹4500</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture11.jpg" style="height: 250px;"alt="furniture11">
+            <h3>Shelves</h3>
+            <p>₹2000</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture12.jpg" style="height: 250px;"alt="furniture12">
+            <h3>chair</h3>
+            <p>₹650</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture13.jpg" style="height: 250px;"alt="furniture13">
+            <h3>Desk</h3>
+            <p>₹1999</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture14.jpg" style="height: 250px;"alt="furniture14">
+            <h3>Cupboard</h3>
+            <p>₹3690</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture15.jpg" style="height: 250px;"alt="furniture15">
+            <h3>Coffee Table</h3>
+            <p>₹4590</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/productimg/furniture16.jpg" style="height: 250px;"alt="furniture16">
+            <h3>Arm chair</h3>
+            <p>₹3999</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </div>
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById("navLinks");
