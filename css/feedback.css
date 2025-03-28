@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+}
+/* Navbar */
+.navbar {
+    background: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    background: #ffcc00;
+    color: black;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin: 10px;
+    transition: 0.3s;
+    box-shadow: 2px 2px 10px rgba(255, 204, 0, 0.5);
+}
+.btn:hover {
+    background: #ffaa00;
+}
+.btn-outline {
+    background: none;
+    border: 2px solid #ffcc00;
+    color: #ffcc00;
+}
+.btn-outline:hover {
+    background: #ffcc00;
+    color: black;
+}
+
+
+
+/* Feedback Section */
+.feedback-section {
+    width: 50%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Input Groups */
+  .input-group {
+    margin: 15px 0;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  /* Star Ratings */
+  .stars {
+    display: flex;
+  }
+  
+  .stars i {
+    font-size: 24px;
+    color: gray;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .stars i.active {
+    color: gold;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    display: block;
+    width: 100%;
+    background: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  .submit-btn:hover {
+    background: #e65c00;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .feedback-section {
+        width: 100%;
+        margin: 20px;
+    }
+  }
+  
+  
