@@ -5,6 +5,7 @@
     background: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid orange;
 }
 
 .contact-form {
@@ -45,4 +46,10 @@
     text-align: center;
     color: black;
     font-size: 40px;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff9800;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
 }
