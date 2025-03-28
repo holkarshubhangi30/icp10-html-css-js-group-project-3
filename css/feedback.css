@@ -4,3 +4,11 @@ body {
     padding: 0;
     background: #f9f9f9;
 }
+/* Navbar */
+.navbar {
+    background: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
