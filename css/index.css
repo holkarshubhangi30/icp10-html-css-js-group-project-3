@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background: url('12345.jpeg') no-repeat center center/cover;
+    background: url('C:\Users\Admin\Desktop\icp10-html-css-js-group-project-3\img\12345.jpeg') no-repeat center center/cover;
     height: 75vh;
     display: flex;
     flex-direction: column;
@@ -63,6 +63,7 @@ nav ul li a:hover {
 .buttons {
     margin-top: 20px;
 }
+
 .btn {
     text-decoration: none;
     background: #ffcc00;
