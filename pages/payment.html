@@ -63,7 +63,9 @@ span {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
+.cash{
+    margin-bottom: 60px;
+}
 .input {
     padding: 10px;
     color: rgb(142, 219, 194);
@@ -107,25 +109,124 @@ a{
 button{
     border:none
 }
+/* Media Query for Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .box {
+        width: 90%;
+        padding: 15px;
+    }
+    .payment-option div {
+        width: 90%;
+    }
+    .next-btn {
+        margin-left: 200px;
+    }
+}
+
+/* Media Query for Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #2c3e50;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .box {
+        width: 95%;
+        padding: 10px;
+    }
+    .upi-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .payment-option div {
+        width: 100%;
+        justify-content: center;
+    }
+    .next-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Media Query for Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 22px;
+    }
+    .menu-icon {
+        font-size: 24px;
+    }
+    .box {
+        width: 100%;
+        padding: 8px;
+    }
+    .payment-option div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .payment-option img {
+        margin-bottom: 5px;
+    }
+    .upi-container div {
+        width: 100px;
+        height: 100px;
+    }
+    .next-btn {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
     </style>
 </head>
 <body>
-   
+    <nav class="navbar">
+        <div class="logo">Market Zone</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/products.html">Categories</a></li>
+            <li><a href="../pages/order.html">Order & Billing</a></li>
+            <li><a href="../pages/about.html">About Us</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="../pages/login.html">Login</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </nav>
     <p>Payment Options</p>
     
         <div class="box">
         <span>UPI</span>
         <div class="upi-container">
-            <div class="upi1"><a href="https://www.phonepe.com"><img src="./../img/phonepe.jpg" alt="phonepe"height="50px"width="100px"><br> PhonePe</a>
+            <div class="upi1"><a href="phonepe.html"><img src="./../img/phonepe.jpg" alt="phonepe"height="50px"width="100px"><br> PhonePe</a>
             </div>&nbsp;&nbsp;
 
-            <div class="upi2"><a href="https://pay.google.com"><img src="./../img/Gpay.jpg" alt="Gpay"height="50px"width="90px"><br>
+            <div class="upi2"><a href="googlepay.html"><img src="./../img/Gpay.jpg" alt="Gpay"height="50px"width="90px"><br>
                 G Pay</a></div>&nbsp;&nbsp;
 
-            <div class="upi3"><a href="https://paytm.com"><img src="./../img/paytm.png" alt="Payment"height="50px"width="50px"><br>
+            <div class="upi3"><a href="paytm.html"><img src="./../img/paytm.png" alt="Payment"height="50px"width="50px"><br>
                 Paytm</a></div>&nbsp;&nbsp;
 
-            <div class="upi4"><img src="./../img/upi.jpg" alt="upi"height="50px"width="50px">Any UPI</div>
+           
             
         </div>
        
@@ -133,48 +234,101 @@ button{
 
     <div class="cash">
         <img src="./../img/indian.png"height="30px" width="30px" alt="">Cash On Delivery 
-    <a href="confirm.html"> <img src="./../img/next-button (1).png"height="20px"width="20px" class="next-btn" alt=""id="cash"></a>
+                  <a href="confirm.html"> <img src="./../img/next-button (1).png"height="20px"width="20px" class="next-btn" alt=""id="cash"></a>
     </div>
-
+<br>
     <div class="debit">
     <img src="./../img/credit-card.png" height="30px" width="30px" alt="">Debit/Credit Cards
     &nbsp; &nbsp; &nbsp;
 
-        <img src="./../img/next-button (1).png" height="20px" width="20px" class="next-btn" alt="" id="debit" onclick="debit()">
-   
+       <a href="debit.html"> <img src="./../img/next-button (1).png" height="20px" width="20px" class="next-btn" alt="" id="debit" onclick="debit()">
+       </a>
 </div>
-
+<br>
     <div class="netbanking">
         <img src="./../img/online-banking.png"height="30px" width="30px"alt="">Netbanking
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  &nbsp; 
               <a href="netbanking.html"><img src="./../img/next-button (1).png"height="20px"width="20px" alt=""class="next-btn"id="netbanking"></a>
     </div>
     </div>
-    <script>
-        const cashElement = document.getElementById("cash");
-        
-        const walletElement = document.getElementById("wallet");
-        const netbankingElement = document.getElementById("netbanking");
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000000;
+            padding: 15px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky; 
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            background-color: #4c4c4c;
+            color: #ff9800;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .menu-icon:hover {
+            color: #ff9800;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #2c3e50;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links li {
+                padding: 15px 0;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
 
-        function debit() {
-    const debitElement = document.querySelector(".debit");
-    
-  
-    if (!document.querySelector(".debit-inputs")) {
-        debitElement.innerHTML += `
-            <div class="debit-inputs" style="display: flex; flex-direction: column; gap: 5px; margin-top: 10px;">
-                <input type="text"id="full" placeholder="Full Name" style="padding: 5px; border-radius: 5px;">
-                <input type="text"id="cardno" placeholder="Card Number" style="padding: 5px; border-radius: 5px;">
-                <input type="text" id="expiry"placeholder="Expiry Date (MM/YY)" style="padding: 5px; border-radius: 5px;">
-                <input type="password" id="cvv"placeholder="Enter CVV" style="padding: 5px; border-radius: 5px;">
-                <button class="button" onclick="valid()"style="padding:6px; border-radius:10px;"><a href="confirm.html">Pay</a></button>
-            </div>`;
-            
-    }
-}
-
-
-    </script>
 </body>
 
 </html>
