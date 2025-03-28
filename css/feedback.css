@@ -98,4 +98,50 @@ nav ul li a:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
   }
+  textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  /* Star Ratings */
+  .stars {
+    display: flex;
+  }
+  
+  .stars i {
+    font-size: 24px;
+    color: gray;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .stars i.active {
+    color: gold;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    display: block;
+    width: 100%;
+    background: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  .submit-btn:hover {
+    background: #e65c00;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .feedback-section {
+        width: 100%;
+        margin: 20px;
+    }
+  }
+  
   
