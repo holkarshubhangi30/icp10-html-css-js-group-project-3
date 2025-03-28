@@ -109,6 +109,94 @@ a{
 button{
     border:none
 }
+/* Media Query for Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .box {
+        width: 90%;
+        padding: 15px;
+    }
+    .payment-option div {
+        width: 90%;
+    }
+    .next-btn {
+        margin-left: 200px;
+    }
+}
+
+/* Media Query for Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #2c3e50;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .box {
+        width: 95%;
+        padding: 10px;
+    }
+    .upi-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .payment-option div {
+        width: 100%;
+        justify-content: center;
+    }
+    .next-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Media Query for Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 22px;
+    }
+    .menu-icon {
+        font-size: 24px;
+    }
+    .box {
+        width: 100%;
+        padding: 8px;
+    }
+    .payment-option div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .payment-option img {
+        margin-bottom: 5px;
+    }
+    .upi-container div {
+        width: 100px;
+        height: 100px;
+    }
+    .next-btn {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
     </style>
 </head>
 <body>
