@@ -77,6 +77,55 @@
         .sub-navbar a:hover {
             background-color: #ff9800;
         }
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .product-card {
+            background: rgb(255, 255, 255);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product-card:hover{
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            transform: translateY(-5px);
+
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .product-card p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .buy-btn {
+            background: #f5a42b;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .buy-btn:hover {
+            background: #ff8800;
+        }
+        .product-img {
+            height: 150px;
+            width: 200px;
+        }
         
         @media (max-width: 768px) {
             .nav-links {
@@ -126,7 +175,133 @@
         <a href="./product4.html"><b>Books</b></a>
         <a href="./product5.html">Vehicles</a>
     </div>
-    <h1>Books</h1>
+   <center> <h1>Books</h1> </center>
+
+      
+    <div class="products-container">
+        <div class="product-card">
+            <img src="../img/books/book20.jpg" style="height: 250px;" alt="Laptop">
+            <h3>Simple Path To Wealth</h3>
+            <p>₹559</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book18.jpg" style="height: 250px;" alt="Smartphone">
+            <h3>Rich & Famous Money Book</h3>
+            <p>₹290</p>
+            <button class="buy-btn">Buy Now</button> .
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book16.jpg" style="height: 250px;"alt="Headphones">
+            <h3>Criminal Psychology</h3>
+            <p>₹874</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book14.jpg" style="height: 250px;"alt="watch">
+            <h3>Law Of Evidence</h3>
+            <p>₹674</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book12.jpg" style="height: 250px;"alt="playstation">
+            <h3>Bhagwat-Gita</h3>
+            <p>₹999</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book10.jpg" style="height: 250px;"alt="webcam">
+            <h3>The Library Of Alexandria</h3>
+            <p>₹543</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book8.jpg" style="height: 250px;"alt="Headphones">
+            <h3>Story Of A Famous Book</h3>
+            <p>₹940</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book6.jpg" style="height: 250px;"alt="vacume cleaner">
+            <h3>Be Book</h3>
+            <p>₹479</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book4.jpg" style="height: 250px;"alt="weight machine">
+            <h3>The Famous Five</h3>
+            <p>₹864</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book2.jpg" style="height: 250px;"alt="camera">
+            <h3>The Great Gals</h3>
+            <p>₹358</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book1.jpg" style="height: 250px;"alt="dslr camera">
+            <h3>Behind Bars</h3>
+            <p>₹648</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book3.jpg" style="height: 250px;"alt="laptop">
+            <h3>Sherlock Holmes</h3>
+            <p>₹739</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book5.jpg" style="height: 250px;"alt="macbook">
+            <h3>Internet Famous</h3>
+            <p>₹624</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book7.jpg" style="height: 250px;" alt="Laptop">
+            <h3>Who Said This</h3>
+            <p>₹919</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book9.jpg" style="height: 250px;" alt="Laptop">
+            <h3>Ancient Egypt's</h3>
+            <p>₹639</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book11.jpg" style="height: 250px;" alt="Laptop">
+            <h3>Early Indians</h3>
+            <p>₹739</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book13.jpg" style="height: 250px;" alt="Laptop">
+            <h3>A Mind To Crime</h3>
+            <p>₹482</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book15.jpg" style="height: 250px;" alt="Laptop">
+            <h3>Crypto Crimes</h3>
+            <p>₹739</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book17.jpg" style="height: 250px;" alt="Laptop">
+            <h3>Money Story & Humanity</h3>
+            <p>₹682</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="../img/books/book19.jpg" style="height: 250px;" alt="Laptop">
+            <h3>Book Of Money</h3>
+            <p>₹559</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </div>
+
+
 
     <script>
         function toggleMenu() {
