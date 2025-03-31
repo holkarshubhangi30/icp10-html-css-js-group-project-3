@@ -21,8 +21,12 @@
             });
         });
     
-        
+        function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+        }
     </script>
+    
     
         
     <style>
@@ -80,6 +84,14 @@
             color: #ff9800;
         }
         @media (max-width: 768px) {
+            h1{
+                font-size: 30px;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .contact-container {
+                margin-top: 50px;
+            }
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -100,6 +112,49 @@
             .menu-icon {
                 display: block;
             }
+    .footer-content{
+    text-align: center;
+    margin-top: 250px;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    height: 70px;
+}
+.socials{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 40px;
+    color: #ffffff;
+
+}
+.li-content{
+    
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    transition: 0.3s;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.li-content:hover{
+    color: #ff9800;
+    transform: scale(1.1);
+}
+.socials:hover{
+    color: #ff9800;
+    transform: scale(1.1);
+}
+.footer-content:hover{
+    color: #ff9800;
+}
         }
     </style>
 </head>
@@ -139,9 +194,9 @@
         <div class="footer-content">
             <p class="para">&copy; 2023 Market Zone. All rights reserved.</p>
             <ul class="socials">
-                <li class="li-content"><a href="https://www.facebook.com/"><img src="./../img/facebook.png" height="20px">  Facebook</a></li>
-                <li class="li-content"><a href="https://www.youtube.com/"><img src="./../img/youtube.png" height="20px">Youtube</a></li>
-                <li class="li-content"><a href="https://www.instagram.com/?hl=en"><img src="./../img/instagram.png" height="20px">Instagram</a></li>
+                <li class="li-content"><a href="https://www.facebook.com/" target="_blank"><img src="./../img/facebook.png" height="20px">  Facebook</a></li>
+                <li class="li-content"><a href="https://www.youtube.com/" target="_blank"><img src="./../img/youtube.png" height="20px">Youtube</a></li>
+                <li class="li-content"><a href="https://www.instagram.com/?hl=en" target="_blank"><img src="./../img/instagram.png" height="20px">Instagram</a></li>
             </ul>
     </footer>
 </body>
